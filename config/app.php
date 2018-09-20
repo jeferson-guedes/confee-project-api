@@ -150,15 +150,24 @@ return [
         /*
          * Package Service Providers...
          */
+        Migrator\MigrationServiceProvider::class,
+
+
+        /*
+         * Domains Services Providers
+         */
+        Confee\Domains\Users\Providers\DomainServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
-        Confee\Providers\AppServiceProvider::class,
-        Confee\Providers\AuthServiceProvider::class,
-        // Confee\Providers\BroadcastServiceProvider::class,
-        Confee\Providers\EventServiceProvider::class,
-        Confee\Providers\RouteServiceProvider::class,
+        Confee\Units\Authentication\Providers\UnitServiceProvider::class,
+
+        /*
+         * Service for jwt auth
+         */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
 
     ],
 
